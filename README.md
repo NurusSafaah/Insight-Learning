@@ -1,52 +1,60 @@
-🎓 Insight Learning
+# 🎓 Insight Learning  
+**Machine Learning Model for Student Learning Pattern Classification**
 
-Machine Learning Model for Student Learning Pattern Classification
+---
 
-📘 Deskripsi Proyek
+## 📘 Deskripsi Proyek
+**Insight Learning** adalah proyek Machine Learning yang bertujuan untuk menganalisis data siswa dari sistem pembelajaran digital dan mengelompokkan mereka ke dalam tiga kategori pola belajar utama, yaitu:  
+- 🧠 **Consistent Learner** – siswa dengan pola belajar stabil dan rutin.  
+- ⚡ **Fast Learner** – siswa yang cepat memahami materi namun cenderung cepat kehilangan fokus.  
+- 💭 **Reflective Learner** – siswa yang lebih lambat dalam memahami, tetapi memiliki pemahaman yang lebih mendalam.
 
-Insight Learning merupakan proyek Machine Learning yang bertujuan untuk menganalisis data siswa dan mengelompokkan mereka ke dalam tiga kategori perilaku belajar, yaitu:
+Proyek ini menggunakan data interaksi siswa dari berbagai aktivitas pembelajaran (akses materi, submission, kuis, dan hasil evaluasi) untuk menemukan pola belajar yang bermakna dan membantu pendidik dalam membuat strategi pembelajaran yang lebih adaptif.
 
-🧠 Consistent Learner – siswa dengan pola belajar stabil dan rutin.
+---
 
-⚡ Fast Learner – siswa yang cepat memahami materi namun cenderung cepat kehilangan fokus.
+## 🧩 Tujuan Proyek
+1. Mengembangkan model Machine Learning untuk mengklasifikasikan pola belajar siswa berdasarkan data aktivitas mereka.  
+2. Mengintegrasikan berbagai sumber data siswa menjadi satu dataset analisis.  
+3. Memberikan insight berbasis data bagi pendidik untuk mendukung pembelajaran yang lebih personal.  
 
-💭 Reflective Learner – siswa yang lebih lambat memproses informasi namun memahami lebih dalam.
+---
 
-Proyek ini bertujuan untuk memberikan insight bagi guru, lembaga pendidikan, dan platform pembelajaran dalam merancang strategi pembelajaran yang lebih adaptif dan personal.
-
-🧩 Tujuan Proyek
-
-Mengembangkan model Machine Learning untuk mengklasifikasikan pola belajar siswa.
-
-Menggunakan data historis siswa (aktivitas, nilai, kehadiran, dll.) untuk menemukan pola tersembunyi.
-
-Menghasilkan rekomendasi berbasis data yang dapat mendukung proses pembelajaran individual.
-
-📂 Struktur Proyek
+## 📂 Struktur Proyek
+```bash
 Insight-Learning/
 ├── data/
+│   ├── raw/                               # data mentah dari Google Drive
+│   │   ├── users.csv
+│   │   ├── developer_journeys.csv
+│   │   ├── developer_journey_tutorials.csv
+│   │   ├── developer_journey_trackings.csv
+│   │   ├── developer_journey_submissions.csv
+│   │   ├── developer_journey_completions.csv
+│   │   └── exam_results.csv
 │   ├── processed/
-│   │   └── data_cleaned.csv
-│   └── external/
+│   │   └── data_cleaned.csv               # hasil preprocessing
+│   └── external/                          # file tambahan (opsional)
 │
 ├── notebooks/
-│   ├── 01_EDA.ipynb
-│   ├── 02_Preprocessing.ipynb 
-│   ├── 03_Model_KNN.ipynb 
-│   ├── 04_Model_NB.ipynb
-│   ├── 05_Evaluation.ipynb
-│   └── utils.ipynb
+│   ├── 01_EDA.ipynb                       # eksplorasi data
+│   ├── 02_Preprocessing.ipynb             # cleaning & transformasi data
+│   ├── 03_Model_KNN.ipynb                 # model K-Nearest Neighbors
+│   ├── 04_Model_NB.ipynb                  # model Naive Bayes
+│   ├── 05_Evaluation.ipynb                # evaluasi & visualisasi
+│   └── utils.ipynb                        # fungsi bantu (opsional)
 │
 ├── src/
-│   ├── data_loader.py
-│   ├── preprocessing.py
-│   ├── model_knn.py
-│   ├── model_nb.py
-│   └── evaluation.py
+│   ├── data_loader.py                     # fungsi untuk load data dari Google Drive
+│   ├── preprocessing.py                   # pipeline preprocessing
+│   ├── model_knn.py                       # definisi model KNN
+│   ├── model_nb.py                        # definisi model Naive Bayes
+│   └── evaluation.py                      # metrik & hasil evaluasi
 │
-├── requirements.txt 
-├── README.md
+├── requirements.txt                       # daftar library
+├── README.md                              # dokumentasi proyek
 └── .gitignore
+
 
 🚀 Alur Proyek (Revisi)
 
