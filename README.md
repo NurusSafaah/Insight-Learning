@@ -54,7 +54,7 @@ Insight-Learning/
 ├── requirements.txt                       # daftar library
 ├── README.md                              # dokumentasi proyek
 └── .gitignore
-```bash
+```
 
 🚀 Alur Proyek (Revisi)
 
